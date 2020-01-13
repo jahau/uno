@@ -37,6 +37,7 @@
 - [#2398] Fully qualify the `MethodName` value for `CreateFromStringAttribute' if it's not fully qualified it the code
 - [WASM] Fix bug where changing a property could remove the required clipping on a view
 - [Android] Fix unconstrained Image loading issue when contained in a ContentControl template
+- Fix `Selector` support for IsSelected (#1606)
 
 ## Release 2.0
 
