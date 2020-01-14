@@ -1,4 +1,4 @@
-﻿# Release notes
+# Release notes
 
 ### Features
 - Support for `EmailManager.ShowComposeNewEmailAsync`
@@ -18,7 +18,6 @@
 -
 
 ### Bug fixes
-- [#915] FontFamily values are now properly parsed on WebAssembly, updated docs with new info
 - [#2213] Fixed `ApplicationData` on MacOS, added support for `LocalSettings`
 - Made macOS Samples app skeleton runnable (temporarily removed ApplicationData check on startup, fixed reference), added xamarinmacos20 to crosstargeting_override sample
 - [#2230] `DisplayInformation` leaks memory
@@ -33,7 +32,6 @@
 - `ViewBox` no longer alters its child's `RenderTransform`
 - [#2033] Add Missing `LostFocus` Value to `UpdateSourceTrigger` Enum
 - [Android] Fix Image margin calculation on fixed size
-- [Android] Native views weren't clipped correctly
 - [iOS] #2361 ListView would measure children with infinite width
 - [iOS] Fix crash when using ComboBox template with native Picker and changing ItemsSource to null after SelectedItem was set
 - [#2398] Fully qualify the `MethodName` value for `CreateFromStringAttribute' if it's not fully qualified it the code
@@ -144,6 +142,8 @@
 * [#1237] Static resources defined in App.xaml were not processed and registered properly
     > This change might break the compilation for projects that define duplicate resources in other globally accessible resource dictionaries. Adjustments to remove duplicate resources may be necessary.
  * [WASM] The tranform returned by `UIElement.TransformToVisual` is now including scale, rotation or any custom transformation that was declard on a parent element (transform was only including translate components)
+
+* You will not be able to build projects targeting Android 9.0 locally anymore. Change your Android target to Android 10.0 or replace MonoAndroid10.0 by MonoAndroid90 in the TargetFrameworks of your projects files.
 
 * You will not be able to build projects targeting Android 9.0 locally anymore. Change your Android target to Android 10.0 or replace MonoAndroid10.0 by MonoAndroid90 in the TargetFrameworks of your projects files.
 
