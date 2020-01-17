@@ -20,16 +20,16 @@ namespace UITests.Shared.Windows_UI_Input.GestureRecognizerTests
 		private void OnParentPointerMoved(object sender, PointerRoutedEventArgs e)
 		{
 			var parentRelToTarget = e.GetCurrentPoint(Target).Position;
-			var parentRelToParent = e.GetCurrentPoint(_Parent).Position;
+			var parentRelToParent = e.GetCurrentPoint(TheParent).Position;
 
-			ParentRelToTarget.Text = F(parentRelToTarget);
+ParentRelToTarget.Text = F(parentRelToTarget);
 			ParentRelToParent.Text = F(parentRelToParent);
 		}
 
 		private void OnTargetPointerMoved(object sender, PointerRoutedEventArgs e)
 		{
 			var targetRelToTarget = e.GetCurrentPoint(Target).Position;
-			var targetRelToParent = e.GetCurrentPoint(_Parent).Position;
+			var targetRelToParent = e.GetCurrentPoint(TheParent).Position;
 
 			TargetRelToTarget.Text = F(targetRelToTarget);
 			TargetRelToParent.Text = F(targetRelToParent);
